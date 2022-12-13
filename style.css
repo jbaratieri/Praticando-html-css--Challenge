@@ -1,0 +1,459 @@
+/*HTML e CSS (exclusivamente): para estudo prático autodidático - Solução para um challenge 
+  do site https://www.captain-design.com/templates/school-solved-simple-html-template-code-for-school
+
+  exclusivamente, "do meu modo, ainda rústico" (iniciante em html/css) */
+
+:root {
+       --font-style-principal: 'Montserrat';
+       --text-color-principal: #252B42;
+       --text-color-secundario: #737373;
+       --color-texto-botao: #FFF;
+       --cor-da-linha: #E74040;
+       --cor-do-botao: #96BB7C;
+       --cor-icone-avaliacao: #2D4059;
+       --estrela-unicode: "\2605";
+       --color-preco-cinza: #BDBDBD;
+       --color-preco-laranja: #FFAB71;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font-style-principal);
+    color: var(--text-color-principal);
+    margin: 0 100px;
+}
+
+.header__principal {
+    display: grid;
+    grid-template-columns: 2fr 5fr 2fr;
+    text-align: center;
+    align-items: center;
+    margin-top: 1em;
+}
+.logo {
+    display: flex;
+    font-size: 24px;
+    font-weight: 700;
+    align-content: flex-start;
+    margin-left: 3em;
+}
+
+.header__links {
+    display: flex;
+    align-content: flex-start;
+    list-style-type: none;
+ }
+
+.links__item a {
+    text-decoration: none;
+    color: var(--text-color-secundario);
+    margin-left: 3em;
+}
+
+.links__item a:hover {
+    text-transform: uppercase;
+    color: var(--text-color-principal);
+    background-color: var(--cor-do-botao);
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+.header__login {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.header__login p {
+    padding: 0.5em;
+    margin-right: 1em;
+} 
+
+.header__login a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-texto-botao);
+    background-color: var(--cor-do-botao);
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+.header__login a:hover {
+    color: var(--text-color-principal);
+}
+
+.container__principal {
+    position: relative;
+}
+
+.caixa__principal {
+    position: absolute;
+    top: 12rem;
+    width: 50%;
+}
+
+.texto__secundario {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cor-do-botao)
+}
+
+.titulo__principal {
+    font-size: 3.6rem;
+    margin: 1em 0;
+}
+
+.texto__principal {
+    font-size: 20px;
+}
+
+.botao__principal {
+    display: flex;
+    margin-top: 5em;
+}
+
+.botao__verde {
+    font-size: 14px;
+    font-weight: 700;
+    background-color: var(--cor-do-botao);
+    color: var(--color-texto-botao);
+    padding: 1em;
+    border-radius: 1em;
+    text-decoration: none;
+    border: var(--cor-do-botao) solid 1px;
+}
+
+.botao__transparente {
+    font-size: 14px;
+    font-weight: 700;
+    background-color:transparent;
+    color: var(--cor-do-botao);
+    padding: 1em 3em;
+    border-radius: 1em;
+    border: var(--cor-do-botao) solid 1px;
+    margin-left: 3em;
+    text-decoration: none;
+}
+
+.botao__transparente:hover {
+    background-color: var(--cor-do-botao);
+    color: var(--color-texto-botao);
+}
+
+.botao__verde:hover {
+    background-color:transparent;
+    color: var(--cor-do-botao);
+} 
+
+.tres__caixas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    background-color: var(--color-texto-botao) ;
+}
+
+.tc__caixas {
+    padding: 4em;
+}
+
+.container__dois {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8em 4em;
+    gap: 7em;
+}
+
+.cd__direita {
+    list-style-type: none;
+}
+
+.cd__direita h3 {
+    font-size: 40px;
+}
+
+.cd__direita p {
+    font-size: 14px;
+    margin: 2em 0;
+}
+
+.id__ancora {
+    color: var(--cor-do-botao);
+    font-size: 14px;
+    font-weight: 700;
+    background-color:transparent;
+    padding: 0.5em 0.7em;
+    border-radius: 0.5em;
+    border: var(--cor-do-botao) solid 1px;
+    text-decoration: none;
+}
+
+.id__ancora:hover {
+    background-color: var(--cor-do-botao);
+    color: var(--color-texto-botao);
+}
+
+.container__tres {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 8em 4em;
+    gap: 7em;
+}
+
+.ct__esquerda {
+    list-style-type: none;
+}
+
+.ct__esquerda h3 {
+    font-size: 40px;
+}
+
+.ct__esquerda p {
+    font-size: 14px;
+    margin: 2em 0;
+}
+
+.ct__ancora {
+    color: var(--cor-do-botao);
+    font-size: 14px;
+    font-weight: 700;
+    background-color:transparent;
+    padding: 0.5em 0.7em;
+    border-radius: 0.5em;
+    border: var(--cor-do-botao) solid 1px;
+    text-decoration: none;
+}
+
+.ct__ancora:hover {
+    background-color: var(--cor-do-botao);
+    color: var(--color-texto-botao);
+}
+
+.cotainer-quatro {
+    margin: 5em 4em;
+}
+
+.cq__cursos {
+    color: var(--cor-do-botao);
+    font-weight: 700;
+}
+
+.cq__descricao h3 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+
+.container-cinco {
+    display: flex;
+    margin: 5em 4em;
+    justify-content: center;
+    gap: 5em;
+}
+
+.cc__textos {
+    margin-left: 1.2em;
+}
+
+.cc__avaliacao {
+    margin: 1em 0;
+    display: flex;
+    gap: 1.5em;
+}
+
+.cc__avaliacao h4 {
+    color: var(--cor-do-botao);
+}
+
+.cc__avaliacao p {
+    background-color: var(--cor-icone-avaliacao);
+    color: var(--color-texto-botao);
+    font-size: 12px;
+    padding: 0.5em;
+    border-radius: 2em;
+    margin-left: 0.5em;
+}
+
+.cc__avaliacao p:before {
+    content: var(--estrela-unicode);
+    color: yellow;
+    padding: 5px;
+}
+
+.cc__textos h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.cc__icone {
+    display: flex;
+    gap: 1em;
+    margin: 1em 0;
+    font-weight: 700;
+}
+
+.cc__preco {
+    display: flex;
+    gap: 1em;
+    margin: 1em 0;
+    font-weight: 700;
+}
+
+.cc__preco1 {
+    color: var(--color-preco-cinza);
+}
+
+.cc__preco2 {
+    color: var(--color-preco-laranja);
+}
+
+.cc__learn {
+    list-style-type: none; 
+}
+
+.cc__learn a {
+    background-color: transparent;
+    color: var(--cor-do-botao);
+    font-weight: 700;
+    border-radius: 2em;
+    border: var(--cor-do-botao) solid 1px;
+    padding: 1em 2em;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10em;
+    text-decoration: none;
+}
+
+.cc__learn a:hover {
+    background-color: var(--cor-do-botao);
+    color: var(--color-texto-botao);
+} 
+
+.cotainer-seis {
+    margin: 5em 4em;
+}
+    
+.cs__cursos {
+    color: var(--cor-do-botao);
+    font-weight: 700;
+}
+    
+.cs__descricao h3 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+
+.conteiner__sete {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 5em 4em;
+}
+
+.cs__depoimento img {
+    border-radius: 50%;
+}
+
+.texto__depoente {
+    margin: 2em 0;
+    color: var(--text-color-secundario);
+}
+
+.nome__depoente {
+    margin: 1em;
+    font-weight: 700;
+}
+
+.profi__depoente {
+    font-weight: 700;
+    color: var(--text-color-secundario);
+}
+
+.container__oito {
+    display: block;
+    text-align: center;
+    margin: 5em 4em;
+}
+
+.co__email {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 2em 0;
+}
+
+.co__texto1 {
+    color: var(--cor-do-botao);
+    font-weight: 700;
+}
+
+.co__texto2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+.co__texto3 {
+    color: var(--text-color-secundario);
+    margin-bottom: 5em;
+}
+
+.botao__submit {
+    color: var(--cor-do-botao);
+    font-weight: 700;
+    padding: 2em;
+    border-radius: 2em;
+    border: var(--cor-do-botao) 1px solid;
+    cursor: pointer;
+}
+
+.botao__submit:hover {
+	background-color: var(--cor-do-botao);
+    color: var(--color-texto-botao);
+	transform: scale(1.2);
+}
+
+.input__email {
+    width:50%;
+    border-radius: 0.5em;
+    border: var(--cor-do-botao) 1px solid;
+    font-size: 14px;
+}
+
+.footer__links {
+    display:flex;
+    justify-content: space-around;
+    margin: 0 5em;
+}
+
+.footer__grupos {
+    list-style-type: none; 
+    font-size: 14px;
+    color: var(--text-color-secundario);
+}
+
+.footer__grupos a {
+    text-decoration: none;
+    line-height: 2em;
+}
+
+.footer__grupos a:hover {
+    background-color: var(--cor-do-botao);
+    padding: 0 1em;
+    border-radius: 1em;
+}
+
+.contato__header {
+    margin-bottom: 1em;
+    font-weight: 700;
+    font-size: 1rem;
+}
